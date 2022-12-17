@@ -1,34 +1,29 @@
 #include <iostream>
-#include <string>
 
 using namespace std;
 
-/**
- * Example demonstrated using strings in C++ manner.
- * @brief main
- * @return
- */
-int main()
-{
-    string botName = "Your Brains";
-    string userName, dayOfWeek;
+void cheers(int n){
+for (int i = 0; i < n; i++){
+cout << "Cheers! ";
+cout << endl;
+}
+}
 
-    cout << "Hello. I am " << botName << endl;
-    cout << "What is your name?" << endl;
-    getline(cin,userName);
-    cout << "Hello " << userName << endl;
-    cout << "What is weekday now?" << endl;
-    getline(cin,dayOfWeek);
-    if(dayOfWeek == "monday") {
-        cout << "Sunday is so far away!\n";
-    }
-    else if(dayOfWeek == "friday") {
-        cout << "Hurraaa!\n";
-    }
-    else {
-        cout << "Working day ... Hrr\n";
-    }
-    return 0;
+double cube(double x)
+{
+return x * x * x;
+}
+
+int main(){
+cheers(5); // вызов функции
+cout << "Give me a number: ";
+double side;
+cin >> side;
+double volume = cube(side); // вызов функции
+cout << "A " << side<<"-foot cube has a volume of ";
+cout << volume << " cubic feet.\n";
+cheers (27);
+return 0;
 }
 
 //Chel
